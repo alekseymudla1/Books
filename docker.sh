@@ -1,0 +1,1 @@
+docker run -d -p 8080:80 -p 8081:433 -e AWS_ACCEESS_KEY_ID=AKIAV3T662ANYJTT7HMA -e AWS_SECRET_ACCESS_KEY=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 -e SQS_URL=https://sqs.us-east-1.amazonaws.com/402919444507/BooksDemoActionsQueue.fifo --name myapp alekseymudla/booksdemo:1.1

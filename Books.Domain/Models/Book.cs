@@ -2,7 +2,7 @@
 
 namespace Books.Domain.Models;
 
-[DynamoDBTable("booksDemo")]
+[DynamoDBTable("BooksDemo")]
 public class Book
 {
     [DynamoDBHashKey("bookId")]

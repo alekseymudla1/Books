@@ -4,10 +4,20 @@
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3"/>
+        <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.3.68" />
+        <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.2" />
+        <PackageReference Include="AWSSDK.SQS" Version="3.7.2.101" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta2" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Books.Domain\Books.Domain.csproj" />
+      <ProjectReference Include="..\Books.Interfaces\Books.Interfaces.csproj" />
     </ItemGroup>
 
 </Project>

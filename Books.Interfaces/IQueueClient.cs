@@ -2,5 +2,5 @@
 
 public interface IQueueClient
 {
-    
+    Task SendAction(string body);
 }
