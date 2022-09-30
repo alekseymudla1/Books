@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Restore started on 'date'
+      - dotnet restore BooksApi/BooksApi.csproj
+  build:
+    commands:
+      - echo build started on 'date'
+      - dotnet publish -c release -o ./build_output BooksApi/BooksApi.csproj
+  
+  artifacts:
+    files:
+      - BooksApi/build_output/**/*
+      - scripts/**/*
+      - appspec.yml
