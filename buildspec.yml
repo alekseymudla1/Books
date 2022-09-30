@@ -9,8 +9,8 @@ phases:
       - echo build started on 'date'
       - dotnet publish -c release -o ./build_output BooksApi/BooksApi.csproj
   
-  artifacts:
-    files:
-      - BooksApi/build_output/**/*
-      - scripts/**/*
-      - appspec.yml
+artifacts:
+  files:
+    - BooksApi/build_output/**/*
+    - scripts/**/*
+    - appspec.yml
