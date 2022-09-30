@@ -3,11 +3,11 @@ phases:
   pre_build:
     commands:
       - echo Restore started on 'date'
-      - dotnet restore BooksApi/BooksApi.csproj
+      - dotnet restore Books.Api/Books.Api.csproj
   build:
     commands:
       - echo build started on 'date'
-      - dotnet publish -c release -o ./build_output BooksApi/BooksApi.csproj
+      - dotnet publish -c release -o ./build_output Books.Api/Books.Api.csproj
   
 artifacts:
   files:
