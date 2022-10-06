@@ -1,0 +1,31 @@
+version: 0.0
+os: linux
+files:
+  - source: Books.Api/build_output
+    destination: /var/www
+  - source: scripts/webapi.service
+    destination: /etc/systemd/system
+hooks:
+  ApplicationStop:
+    - location: scripts/stop_service
+      timeout: 300
+      runas: root
+  
+  BeforeInstall:
+    - location: scripts/remove_application
+      timeout: 300
+      runas: root
+      
+  AfterInstall:
+    - location: scripts/install_dotnetocore
+      timeout: 500
+      runas: root
+
+    - location: scripts/install_httpd
+      timeout: 500
+      runas: root
+
+  ApplicationStart:
+    - location: scripts/install_httpd
+      timeout: 500
+      runas: root
